@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+    Ton app météo !
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+        <h1>Recherche la météo dans la ville de ton choix</h1>
+        <span>&nbsp;</span>
+        <div class="form">
+        {% if form is defined %}
+        {{ form_start(form) }}
+		<div class="city">
+            <label for="cityNameInput" class="input">{{ form_label(form.city_name) }}</label>
+            {{ form_widget(form.city_name) }}
+            {{ form_errors(form.city_name) }}
+            {{ form_end(form) }}
+            {% endif %}
+        </div>
+
+      
+        </div>
+  
+    </div>
+
+{% endblock %}
